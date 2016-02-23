@@ -197,6 +197,19 @@ var fact = factorial(9)
 println(fact)
 
 
+/**** Do a wordcount of a textfile & map words to counts ******/
+
+import scala.io.Source
+
+val lines = Source.fromFile("README.md").getLines.toArray
+
+val Counts = new collection.mutable.HashMap[String,Int].withDefaultValue(0)
+
+lines.flatMap(lines => lines.split(" ")).foreach(word => Counts(word) += 1)
+
+println(Counts)
+
+
 
 
 
