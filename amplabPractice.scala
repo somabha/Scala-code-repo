@@ -185,10 +185,9 @@ var ret = myNumbers.map{x => x * x * x}
 println(ret)
 
 
+
 def factorial(n: Int): Int = { 
-	if(n==0) return 0
-	if(n==1) return 1
-	if(n==2) return 2
+	if(n==0) 1
 	else {
 		n*factorial(n-1)
 	}
